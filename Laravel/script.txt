@@ -11,10 +11,29 @@ php -r "unlink('composer-setup.php');"
 // Создание прокта 
 php composer.phar create-project --prefer-dist laravel/laravel <name-dict>
 
+// Переходим в папку
+cd <name-dict>
 
 // Доп установка composer
 composer install --ignore-platform-reqs
+// composer require laravel/ui --ignore-platform-reqs
+
+
+
+php artisant package:discover --ansi
+php artisan key:generate --ansi
+
 
 // Запуск сервера
-cd <name-dict>
+
 php artisan serve
+
+
+
+// Инициализируем vue 
+php artisan ui vue --auth
+
+
+// Доп требуемые команды
+npm install
+npm run dev
