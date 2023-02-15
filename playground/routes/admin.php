@@ -8,9 +8,9 @@ Route::prefix('admin')->middleware(['auth','authAdminPanel'])->group(function ()
         return "/";
     });
 
-    Route::get('/user/profile', function () {
-        return "/user/profile";
-    });
+//    Route::get('/user/profile', function () {
+//        return "/user/profile";
+//    });
 });
 
 
@@ -19,9 +19,9 @@ Route::prefix('auth')->group(function () {
         return view('identification');
     })->name('login');
 
-    Route::get('/user/profile', function () {
-        return "/user/profile";
-    });
+//    Route::get('/user/profile', function () {
+//        return "/user/profile";
+//    });
 
     Route::post('/auth', [adminAuth::class, 'login']);
 });

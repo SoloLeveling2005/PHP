@@ -90,12 +90,13 @@ class adminAuth extends Controller
             'username' => 'required|string',
             'password' => 'required|string',
         ]);
-        if (Auth::attempt(['username' => $validatedData['username'], 'password' => $validatedData['password']])) {
+//        echo dd(Auth::attempt(['email' => 'email1', 'password' => 'hellouniverse1!']));
+        if (Auth::attempt(['email' => $validatedData['username'], 'password' => $validatedData['password']])) {
             // Аутентификация прошла успешно...
-            echo "YEEEEEES";
-            return "";
+            return "YEEEEEES";
 //            return redirect()->intended('/dashboard');
         }
+        echo dd(Auth::guard('user')->getProvider()->retrieveByCredentials($validatedData));
         echo $validatedData['username'];
         echo bcrypt($validatedData['password']);
 

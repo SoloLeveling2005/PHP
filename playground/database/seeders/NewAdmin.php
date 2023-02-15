@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 // todo seeder - php artisan make:seeder NewAdmin
 // todo run main seeder (DatabaseSeeder) - php artisan db:seed
@@ -18,16 +19,16 @@ class NewAdmin extends Seeder
     {
         $data_admins = [
             [
-                'name'=>'user_test1',
-                'email'=>'email1',
-                'username'=>'admin1',
-                'password'=>'hellouniverse1!'
+                'name'=>'user_test3',
+                'email'=>'email3',
+                'username'=>'admin3',
+                'password'=>Hash::make('hellouniverse1!')
             ],
             [
-                'name'=>'user_test2',
-                'email'=>'email2',
-                'username'=>'admin2',
-                'password'=>'hellouniverse2!'
+                'name'=>'user_test4',
+                'email'=>'email4',
+                'username'=>'admin4',
+                'password'=>Hash::make('hellouniverse2!')
             ]
         ];
         foreach ($data_admins as $data_admin) {
