@@ -18,17 +18,21 @@ class NewAdmin extends Seeder
     {
         $data_admins = [
             [
+                'name'=>'user_test1',
+                'email'=>'email1',
                 'username'=>'admin1',
-                'password'=>bcrypt('hellouniverse1!')
+                'password'=>'hellouniverse1!'
             ],
             [
+                'name'=>'user_test2',
+                'email'=>'email2',
                 'username'=>'admin2',
-                'password'=>bcrypt('hellouniverse2!')
+                'password'=>'hellouniverse2!'
             ]
         ];
         foreach ($data_admins as $data_admin) {
             // todo добавляем косую черту так как он не видит DB фаил
-            \DB::table('admins')->insert($data_admin);
+            \DB::table('users')->insert($data_admin);
         }
     }
 }

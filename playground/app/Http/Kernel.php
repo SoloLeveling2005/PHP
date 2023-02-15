@@ -39,7 +39,7 @@ class Kernel extends HttpKernel
 //        ],
         'admin' => [
             // todo добавляем либо сюда, либо в $routeMiddleware, уже создан но не подключен (authAdminPanel)
-            \App\Http\Middleware\AuthAdminPanel::class,
+//            \App\Http\Middleware\AuthAdminPanel::class,
 
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
@@ -66,7 +66,7 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $routeMiddleware = [
-        'authAdminPanel' => \App\Http\Middleware\AuthAdminPanel::class,
+//        'adminAuth' => \App\Http\Middleware\adminAuth::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
