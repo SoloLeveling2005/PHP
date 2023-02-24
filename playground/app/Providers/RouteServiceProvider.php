@@ -18,44 +18,35 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
-    protected $namespace = 'App\\Http\\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
+        $this->configureRateLimiting();
 
-        $this->restApi();
-        $this->adminPanel();
+        $this->routes(function () {
+            Route::middleware('api')
+                ->prefix('api')
+                ->group(base_path('routes/api.php'));
 
-    //        $this->routes(function () {
-    //            Route::middleware('api')
-    //                ->prefix('api')
-    //                ->group(base_path('routes/api.php'));
-    //
-    //            Route::middleware('web')
-    //                ->group(base_path('routes/web.php'));
-    //
-    //
-    //        });
-    }
+            Route::middleware('web')
+                ->group(base_path('routes/web.php'));
 
-    protected function restApi()
-    {
-        Route::prefix('api')->middleware('api')->group(function () {
-            Route::middleware('api')->namespace($this->namespace)->group(base_path('routes/api.php'));
+            Route::middleware('admin')
+                ->prefix('admin')
+                ->group(base_path('routes/admin.php'));
         });
     }
 
-    // todo login to the portal, ulr:       /XX-module-a/admin
-    // todo check user, url:                /XX-module-a/user/:username
-    // todo check game, url:                /XX-module-a/game/:slug         slug = game id
-
-    protected function adminPanel()
+    /**
+     * Configure the rate limiters for the application.
+     */
+    protected function configureRateLimiting(): void
     {
-        Route::prefix('XX-module-a')->group(base_path('routes/admin.php'));
+        RateLimiter::for('api', function (Request $request) {
+            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
+        });
     }
 }
