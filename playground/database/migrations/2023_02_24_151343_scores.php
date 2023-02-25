@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
            $table->id();
-           $table->string('user');
+//           $table->bigInteger('user');
+           $table->foreignId('user')->references('id')->on('users')->onDelete('cascade');
            $table->string('game versions');
            $table->float('score');
 
-           $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('game versions', function (Blueprint $table) {
             $table->id();
-            $table->string('game');
+//            $table->bigInteger('game');
+            $table->foreignId('game')->references('id')->on('games')->onDelete('cascade');
             $table->binary('files');
 
-            $table->foreign('game')->references('id')->on('games')->onDelete('cascade');
+
         });
     }
 
