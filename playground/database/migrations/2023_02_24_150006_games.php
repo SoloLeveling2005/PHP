@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('games', function(Blueprint $table) {
             $table->id();
-            $table->string('title')->index();
+            $table->string('title');
             $table->string('slug');
             $table->string('description');
             $table->string('author');
 
-            $table->foreign('author')->references('username')->on('users')->onDelete('cascade');
+            $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -17,7 +17,7 @@ return new class extends Migration
            $table->string('game versions');
            $table->float('score');
 
-           $table->foreign('user')->references('username')->on('users')->onDelete('cascade');
+           $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::drop('scores');
     }
 };
