@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="helper.css">
+</head>
+<body class="body">
+    <section class="header container">
+        <h3>Admin1</h3>
+        <a href="">Log out</a>
+    </section>
+    <section class="user-panel container">
+        <h3>User1</h3>
+        <h4>Status: <span class="color-green">Active</span></h4>
+        <h4>Date register: <span>26.02.2023</span></h4>
+        <h4>Date auth: <span>28.02.2023</span></h4>
+        <h4>Roles: <span class="role">user</span><span class="role">game developer</span></h4>
+    </section>
+    <section class="main container" style="display:block;">
+        
+        <div class="d-flex">
+            <div class="category m-0 m-r-10 w-p-50">
+                <div class="category-header">Games Develop</div>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <th class="">Title</th>
+                            <th class="">Last version</th>
+                            <th class="">Data load</th>
+                        </tr>
+                        <tr class="select">
+                            <td>Game1</td>
+                            <td>v-1</td>
+                            <td>27.02.2023</td>
+                        </tr>
+                        <tr class="select">
+                            <td>Game2</td>
+                            <td>v-3</td>
+                            <td>27.02.2023</td>
+                        </tr>
+                        <tr class="select">
+                            <td>Game3</td>
+                            <td>v-2</td>
+                            <td>27.02.2023</td>
+                        </tr>
+                    </table>
+                    <!-- <a class="chapter" href=""> <span class="f-w-b"></span><span style="float:right;"></span></a>
+                    <a class="chapter" href="">Game1 <span class="f-w-b">v-1</span><span style="float:right;"></span></a>
+                    <a class="chapter" href="">Game2 <span class="f-w-b">v-2</span><span style="float:right;">27.02.2023</span></a> -->
+                </div>
+            </div>
+            <div class="category m-0 m-r-10 w-p-50">
+                <div class="category-header">Game Scores</div>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <th class="">Title</th>
+                            <th class="">Version</th>
+                            <th class="">Score</th>
+                            <th class="">Action</th>
+                        </tr>
+                        <tr>
+                            <td>Game1</td>
+                            <td>v-1</td>
+                            <td>1000</td>
+                            <td><button class="warning">Del score</button></td>
+                        </tr>
+                        <tr>
+                            <td>Game2</td>
+                            <td>v-3</td>
+                            <td>3200</td>
+                            <td><button class="warning">Del score</button></td>
+                        </tr>
+                        
+                    </table>
+                    <button class="warning" style="margin:7px;">Del all scores</button>
+                    <!-- <a class="chapter" href=""> <span class="f-w-b"></span><span style="float:right;"></span></a>
+                    <a class="chapter" href="">Game1 <span class="f-w-b">v-1</span><span style="float:right;"></span></a>
+                    <a class="chapter" href="">Game2 <span class="f-w-b">v-2</span><span style="float:right;">27.02.2023</span></a> -->
+                </div>
+            </div>
+<!-- 
+            <div class="category m-0 w-p-50">
+                <div class="category-header">Game Scores</div>
+                <div class="content">
+                    <a class="chapter" href="">Game1 - <span class="f-w-b" style="float:right;">1000</span></a>
+                    <a class="chapter" href="">Game2 - <span class="f-w-b" style="float:right;">3200</span></a>
+                </div>
+            </div> -->
+        </div>
+
+        <button class="danger m-t-10">Block User1</button>
+    </section>
+
+</body>
+</html>

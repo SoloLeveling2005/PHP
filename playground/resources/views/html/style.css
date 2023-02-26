@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+table{
+    border-spacing: 0px;
+    border-collapse: collapse;
+  }
+a {
+    text-decoration: none;
+    /* color: white; */
+    color: black;
+}
+.container {
+    padding: 0 60px;
+}
+.body {
+    /* background-color: rgb(48 52 67); */
+    background-color: #fff;
+}
+.main {
+    width: auto;
+    display: flex;
+    padding-top: 20px;
+}
+.header {
+    width: auto;
+    height: 50px;
+    background-color: rgb(24 26 33);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.header * {
+    color: white;
+}
+
+.category {
+    border: 1.5px solid rgba(0, 0, 0, 0.309);
+    border-radius: 5px;
+    width: 30vw;
+    margin: 0 10px;
+    height: min-content;
+}
+.category .category-header {
+    /* width: 100%; */
+    font-weight: bold;
+    padding: 7px 10px;
+    background-color: #eaeaea;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.309);
+}
+.category .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.category .content .chapter {
+    padding: 4px 7px;
+}
+.category .content .chapter:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+
+.category .content .chapter:last-child{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+/* .list_users {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.user {
+    padding: 20px 10px;
+    width: 50%;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+
+
+.list_games {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.game {
+    padding: 20px 10px;
+    width: 50%;
+    border: 1px solid white;
+    margin: 10px;
+} */
+
+
+.user-panel {
+    padding-top: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+.user-panel h4 {
+    margin: 5px 0;
+}
+.role {
+    padding: 4px 6px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #cfcfcf;
+    margin-right: 5px;
+    font-size: 14px;
+}
+.content .select:hover {
+    background-color: #dadada;
+    cursor: pointer;
+}
+.content td {
+    text-align: center;
+    padding: 5px 0;
+}
+.content th {
+    text-align: center;
+    padding: 5px;
+    font-size: 17px;
+}
