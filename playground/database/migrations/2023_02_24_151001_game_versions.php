@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 //            $table->bigInteger('game');
             $table->foreignId('game')->references('id')->on('games')->onDelete('cascade');
-            $table->binary('files');
+            $table->string('files');
 
 
         });
