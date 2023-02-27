@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('scores', function (Blueprint $table) {
            $table->id();
 //           $table->bigInteger('user');
-           $table->foreignId('user')->references('id')->on('users')->onDelete('cascade');
+           $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
            $table->string('game versions');
            $table->float('score');
 

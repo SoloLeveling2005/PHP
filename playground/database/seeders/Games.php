@@ -19,8 +19,7 @@ class Games extends Seeder
                 'title'=> 'Demo Game 1',
                 'slug'=>'demo-game-1',
                 'description'=> 'This is demo game 1',
-                'author'=> 'dev1'
-//                'author'=> (User::where('username', 'dev1')->first())->id
+                'author_id' => (User::where('username', 'dev1')->first())->id
             ],
             [
                 'title'=> 'Demo Game 1',

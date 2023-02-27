@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('games', function(Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->foreignId('author')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('author_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('slug');
             $table->string('description');
 //            $table->bigInteger('author');

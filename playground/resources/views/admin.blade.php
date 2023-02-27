@@ -8,7 +8,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- Styles -->
         <style>
             * {
@@ -58,9 +58,10 @@
     @else
         <section class="main">
             Hello
+            <button class="btn btn-success">Success</button>
         </section>
     @endif
 
-{{--    <script src="/js/app.js"></script>--}}
+    <link href="/bootstrap/js/bootstrap.min.js" rel="stylesheet">
     </body>
 </html>

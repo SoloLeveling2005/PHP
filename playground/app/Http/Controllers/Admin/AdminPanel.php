@@ -30,7 +30,7 @@ class AdminPanel extends Controller
         ]);
         if (Auth::attempt(['username' => $val_data['username'], 'password' => $val_data['password']])) {
             // Аутентификация прошла успешно...
-            return "YEEEEEES";
+            return view('admin');
         }
         return "Nonono";
     }
