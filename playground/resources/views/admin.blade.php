@@ -1,67 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>AdminPanel</title>
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Styles -->
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-            }
-            body {
-                display:flex;
-                width: 100vw;
-                height: 100vh;
-                align-items: center;
-                justify-content: center;
-            }
-            form {
-                display: flex;
-                flex-direction: column;
-            }
-            input {
-                padding: 7px;
-                margin: 5px;
-                font-size: 16px;
-            }
-            input[type=submit] {
-                background-color: #fff;
-                border:1px solid black;
-                border-radius: 7px;
-                padding: 10px;
-            }
-            input[type=submit]:hover {
-                background-color: #eaeaea;
-                cursor: pointer;
-            }
-            .main {
-                width: 100vw;
-                height: 100vh;
-            }
-        </style>
-    </head>
-    <body class="container">
-    @if($role == "guest")
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-            <input name="username" type="text" placeholder="username">
-            <input name="password" type="password" placeholder="password">
-            <input type="submit" value="Авторизоваться">
-        </form>
-    @else
-        <section class="main">
-            Hello
-            <button class="btn btn-success">Success</button>
-        </section>
-    @endif
+@extends('main')
+@if($role == "guest")
+    @section('content')
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center ">
+            <form method="POST" action="{{ route('login') }}" class="mx-auto my-auto d-flex flex-column">
+                @csrf
+                <input name="username" type="text" placeholder="username" class="m-2 p-2 fs-3">
+                <input name="password" type="password" placeholder="password" class="m-2 p-2 fs-3">
+                <input type="submit" value="Авторизоваться" class="m-2 p-1 fs-3 btn btn-success">
+            </form>
+        </div>
+        @include('login')
+    @endsection
+@else
+    @section('content')
+    <section class="main">
+        Hello
+        <button class="btn btn-success">Success</button>
+    </section>
+    @endsection
+@endif
 
-    <link href="/bootstrap/js/bootstrap.min.js" rel="stylesheet">
-    </body>
-</html>

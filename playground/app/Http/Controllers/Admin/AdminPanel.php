@@ -32,7 +32,7 @@ class AdminPanel extends Controller
             // Аутентификация прошла успешно...
             return view('admin');
         }
-        return "Nonono";
+        return view('admin', ['role'=>'guest']);
     }
     public function auth() {
 
