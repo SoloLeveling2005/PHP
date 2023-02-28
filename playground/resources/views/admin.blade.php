@@ -1,22 +1,43 @@
 @extends('main')
 @if($role == "guest")
     @section('content')
-        <div class="w-100 h-100 d-flex justify-content-center align-items-center ">
-            <form method="POST" action="{{ route('login') }}" class="mx-auto my-auto d-flex flex-column">
-                @csrf
-                <input name="username" type="text" placeholder="username" class="m-2 p-2 fs-3">
-                <input name="password" type="password" placeholder="password" class="m-2 p-2 fs-3">
-                <input type="submit" value="Авторизоваться" class="m-2 p-1 fs-3 btn btn-success">
-            </form>
-        </div>
         @include('login')
     @endsection
 @else
     @section('content')
-    <section class="main">
-        Hello
-        <button class="btn btn-success">Success</button>
-    </section>
+        <!-- Nav tabs -->
+        <div class="bg-black p-2">
+
+            <ul class="nav nav-tabs border-0 container" id="myTab" role="tablist">
+                <li class="fs-3 w-auto text-white fw-bold" style="margin-right: 40px;">Admin1</li>
+                <li class="nav-item d-flex align-middle" role="presentation">
+                    <button class="text-white bg-black fw-bold" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item d-flex align-middle" role="presentation">
+                    <button class="text-white bg-black fw-bold" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Users</button>
+                </li>
+                <li class="nav-item d-flex align-middle" role="presentation">
+                    <button class="text-white bg-black fw-bold" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Games</button>
+                </li>
+                <button class="btn ms-auto text-white fs-6">Log out</button>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+
+            </div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+
+            </div>
+        </div>
+
     @endsection
 @endif
 
