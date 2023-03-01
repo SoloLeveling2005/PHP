@@ -124,6 +124,8 @@
       <path value="$PROJECT_DIR$/playground/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/playground/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/playground/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/playground/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/playground/vendor/guzzlehttp/uri-template" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

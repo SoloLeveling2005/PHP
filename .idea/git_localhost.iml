@@ -120,6 +120,8 @@
       <excludeFolder url="file://$MODULE_DIR$/playground/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/playground/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/playground/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/playground/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/playground/vendor/guzzlehttp/uri-template" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

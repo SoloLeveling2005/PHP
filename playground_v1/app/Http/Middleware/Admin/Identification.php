@@ -2,11 +2,13 @@
 
 namespace App\Http\Middleware\Admin;
 
+use App\Http\Controllers\Admin\AdminPanel;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class AdminAuth
+class Identification
 {
     /**
      * Handle an incoming request.
@@ -15,11 +17,10 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->session()->has('admin_key')) {
-            return $next($request);
-        } else {
-            return view('auth');
-        }
 
+        if (Auth::check()) {
+            return $next($request);
+        }
+        return view('login');
     }
 }
