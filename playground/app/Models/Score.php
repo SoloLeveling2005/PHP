@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Admin extends Authenticatable
+class Score extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -18,19 +18,11 @@ class Admin extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
-        'password',
+        'user_id',
+        'game_version_id',
+        'score'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-    protected $guard = 'admin';
-    protected $table = 'admins';
+
+    protected $table = 'scores';
 }

@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Admin extends Authenticatable
+class Game extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -18,8 +18,10 @@ class Admin extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'username',
-        'password',
+        'title',
+        'slug',
+        'description',
+        'author_id',
     ];
 
     /**
@@ -27,10 +29,6 @@ class Admin extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-    protected $guard = 'admin';
-    protected $table = 'admins';
+
+    protected $table = 'games';
 }
