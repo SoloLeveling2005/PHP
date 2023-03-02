@@ -17,15 +17,21 @@ class GameVersions extends Seeder
         $datas = [
             [
                 'game_id'=>(Game::where('title', 'Demo Game 1')->first())->id,
-                'file_name'=>'demo-game-1-v1'
+                'file_name'=>'demo-game-1-v1',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'game_id'=>(Game::where('title', 'Demo Game 1')->first())->id,
-                'file_name'=>'demo-game-1-v2'
+                'file_name'=>'demo-game-1-v2',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'game_id'=>(Game::where('title', 'Demo Game 2')->first())->id,
-                'file_name'=>'demo-game-2-v1'
+                'file_name'=>'demo-game-2-v1',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
         foreach ($datas as $data) {

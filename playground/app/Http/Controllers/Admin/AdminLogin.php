@@ -19,14 +19,8 @@ class AdminLogin extends Controller
             'password' => 'required',
         ]);
 
-        if ($auth::guard('admin')->attempt([
-            'username' => 'admin1',
-            'password' => 'hellouniverse1!',
-        ], true)) {
-            $auth::guard('admin')->attempt([
-                'username' => 'admin1',
-                'password' => 'hellouniverse1!',
-            ], true);
+        if ($auth::guard('admin')->attempt($validated, true)) {
+//            Admin::where($validated)->update(['updated_at'=>now()]);
 
             return Redirect::route('admin');
 //            return redirect()->intended('XX-module-a/admin');

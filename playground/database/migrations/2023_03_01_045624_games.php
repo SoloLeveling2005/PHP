@@ -17,7 +17,10 @@ return new class extends Migration
             $table->string('slug');
             $table->string('description');
             $table->foreignId('author_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->softDeletes();
+            $table->timestamps();
         });
+
     }
 
     /**

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('username');
             $table->string('password');
             $table->rememberToken();
+            $table->softDeletes();
+            $table->string('reason_for_deletion')->nullable();
             $table->timestamps();
         });
     }

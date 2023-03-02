@@ -21,12 +21,16 @@ class Games extends Seeder
                 'slug'=>'demo-game-1',
                 'description'=>'This is demo game 1',
                 'author_id'=>(User::where('username', 'dev1')->first())->id,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'title'=>'Demo Game 2',
                 'slug'=>'demo-game-2',
                 'description'=>'This is demo game 2',
                 'author_id'=>(User::where('username', 'dev2')->first())->id,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
         foreach ($datas as $data) {

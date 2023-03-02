@@ -20,47 +20,65 @@ class Scores extends Seeder
             [
                 'user_id'=>(User::where('username', 'player1')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>10.0
+                'score'=>10.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'player1')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>15.0
+                'score'=>15.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'player1')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>12.0
+                'score'=>12.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'player2')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>20.0
+                'score'=>20.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'player2')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 2')->first())->id))->first())->id,
-                'score'=>30.0
+                'score'=>30.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'dev1')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>1000.0
+                'score'=>1000.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'dev1')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>-300.0
+                'score'=>-300.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'dev2')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 1')->first())->id))->first())->id,
-                'score'=>5.0
+                'score'=>5.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id'=>(User::where('username', 'dev2')->first())->id,
                 'game_version_id'=>(GameVersion::where('game_id', ((Game::where('title', 'Demo Game 2')->first())->id))->first())->id,
-                'score'=>200.0
+                'score'=>200.0,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
         foreach ($datas as $data) {

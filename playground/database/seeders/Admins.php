@@ -17,11 +17,15 @@ class Admins extends Seeder
         $admins = [
             [
                 'username'=>'admin1',
-                'password'=>Hash::make('hellouniverse1!')
+                'password'=>Hash::make('hellouniverse1!'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'username'=>'admin2',
-                'password'=>Hash::make('hellouniverse2!')
+                'password'=>Hash::make('hellouniverse2!'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
         foreach ($admins as $admin) {

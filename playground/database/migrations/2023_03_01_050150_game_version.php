@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('game_id')->references('id')->on('games')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('file_name');
+            $table->softDeletes();
+            $table->timestamps();
         });
+
     }
 
     /**

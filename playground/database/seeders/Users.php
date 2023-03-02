@@ -19,19 +19,27 @@ class Users extends Seeder
         $users = [
             [
                 'username'=>'player1',
-                'password'=>Hash::make('helloworld1!')
+                'password'=>Hash::make('helloworld1!'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'username'=>'player2',
-                'password'=>Hash::make('helloworld2!')
+                'password'=>Hash::make('helloworld2!'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'username'=>'dev1',
-                'password'=>Hash::make('hellobyte1!')
+                'password'=>Hash::make('hellobyte1!'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'username'=>'dev2',
-                'password'=>Hash::make('hellobyte2!')
+                'password'=>Hash::make('hellobyte2!'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ];
         foreach ($users as $user) {
