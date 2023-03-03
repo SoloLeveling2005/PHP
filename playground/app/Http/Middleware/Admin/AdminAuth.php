@@ -18,16 +18,9 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next)
     {
-//        Auth::guard('admin')->attempt([
-//            'username' => 'admin1',
-//            'password' => 'hellouniverse1!',
-//        ], true);
-//        dd(auth()->user());
-
-//        dd(Auth::guard('admin'));
-//        if (!Auth::check()) {
-//            return redirect()->route('login' , ['error'=>'middle_error']);
-//        }
+        if (!Auth::guard('admin')->check()) {
+            return redirect()->route('login' , ['error'=>'middle_error']);
+        }
         return $next($request);
     }
 }

@@ -28,11 +28,7 @@ Route::controller(AdminPanel::class)->group(function () {
 
 
       // todo
-      Route::get('user/{username}', function ($username) {
-        return $username;
-      })->name('user');
+    Route::get('user/{username}', [AdminPanel::class, 'user'])->name('user');
 
-    Route::get('game/{slug}', function ($slug) {
-        return $slug;
-    })->name('game');
+    Route::get('game/{slug}', [AdminPanel::class, 'game'])->name('game');
 });
