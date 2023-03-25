@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="helper.css">
+</head>
+<body class="body">
+    <section class="header container">
+        <h3>Admin1</h3>
+        <a href="">Log out</a>
+    </section>
+    <section class="user-panel container">
+        <h3>Game1</h3>
+        <h4>Author: <span><a href="">User2</a></span></h4>
+        <h4>Status: <span class="color-green">Active</span></h4>
+        <h4>Date create: <span>26.02.2023</span></h4>
+        <h4>Date update: <span>28.02.2023</span></h4>
+        <h4>Last version: <span>v-4</span></h4>
+    </section>
+    <section class="main container" style="display:block;">
+        <div class="d-flex">
+            <div class="category m-0 m-r-10 w-p-50">
+                <div class="category-header">Games Develop</div>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <th class="">Title</th>
+                            <th class="">Version</th>
+                            <th class="">Data load</th>
+                        </tr>
+                        <tr class="">
+                            <td>Game1</td>
+                            <td>v-1</td>
+                            <td>27.02.2023</td>
+                            <td><button class="warning">Del version</button></td>
+                        </tr>
+                        <tr class="">
+                            <td>Game2</td>
+                            <td>v-2</td>
+                            <td>28.02.2023</td>
+                            <td><button class="warning">Del version</button></td>
+                        </tr>
+                        <tr class="">
+                            <td>Game3</td>
+                            <td>v-3</td>
+                            <td>29.02.2023</td>
+                            <td><button class="warning">Del version</button></td>
+                        </tr>
+                    </table>
+                    <button class="warning" style="margin:7px;">Del all versions</button>
+                </div>
+            </div>
+            <div class="category m-0 m-r-10 w-p-50">
+                <div class="category-header">Game Scores</div>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <th class="">Username</th>
+                            <th class="">Version</th>
+                            <th class="">Score</th>
+                            <th class="">Action</th>
+                        </tr>
+                        <tr>
+                            <td>User1</td>
+                            <td>v-1</td>
+                            <td>1000</td>
+                            <td><button class="warning">Del score</button></td>
+                        </tr>
+                        <tr>
+                            <td>User2</td>
+                            <td>v-3</td>
+                            <td>3200</td>
+                            <td><button class="warning">Del score</button></td>
+                        </tr>
+                        <tr>
+                            <td>User3</td>
+                            <td>v-3</td>
+                            <td>2200</td>
+                            <td><button class="warning">Del score</button></td>
+                        </tr>
+                        
+                    </table>
+                    <button class="warning" style="margin:7px;">Del all scores</button>
+                </div>
+            </div>
+        </div>
+        <button class="danger m-t-10">Delete Game1</button>
+    </section>
+</body>
+</html>
