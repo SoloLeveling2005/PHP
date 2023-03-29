@@ -20,7 +20,6 @@ class AdminLogin extends Authenticatable
             'username'=>'required',
             'password'=>'required'
         ]);
-//        dd($validate);
         if ($auth::guard('admin')->attempt(['username'=>$validate['username'], 'password'=>$validate['password']])) {
             $admin_id = $auth::guard('admin')->user()->getAuthIdentifier();
             DB::table('admins')->where(['id'=>$admin_id])->update(['updated_at'=>now()]);
