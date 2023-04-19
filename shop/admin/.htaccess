@@ -1,3 +1,0 @@
-# .htaccess для админки магазина
-Options -Indexes
-DirectoryIndex index.php
